@@ -4,35 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über Julius Grotrian</title>
-    <style>
-        body {
-            background-color: #faf9f1;
-        }
-        .nstyle {
-            text-align: center;
-            font-family: "Courier";
-        }
-        .mstyle {
-            text-align: left;
-            padding-left: 2%;
-            font-family: "Courier";
-            font-weight:bolder;
-            font-size: large;
-            max-width: 700px;
-        }
-        .gadse {
-            width: 150px;
-            height: 250px;
-            margin-left: 20px;
-            border-radius: 8px;
+<style>
+    body {
+        background-color: #dfdab9;
+    }
+    .nstyle {
+        text-align: center;
+        font-family: "Courier";
+    }
+    .outer-flex {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1900px;
+        margin: 40px auto 0 auto;
+    }
+    .flex-container {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        max-width: 900px;
+        min-width: 300px;
+        border: 2px solid #333;
+        border-radius: 8px;
+        background: #e9e6db;
+        padding: 20px;
+        box-sizing: border-box;
+        gap: 20px;
+        flex: 1 1 400px;
+    }
+    .mstyle {
+        text-align: left;
+        font-family: "Courier";
+        font-weight: bolder;
+        font-size: large;
+        max-width: 700px;
+        margin: 0;
+        padding: 0;
+    }
+    .gadse {
+        width: 50%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: contain;
+        flex-shrink: 0;
+        max-width: 200px;
+    }
+    @media (max-width: 1200px) {
+        .outer-flex {
+            flex-direction: column;
+            gap: 20px;
         }
         .flex-container {
-            display: flex;
-            align-items: flex-start;
-            max-width: 900px;
-            margin: 40px auto 0 auto;
+            max-width: 100%;
         }
-    </style>
+    }
+    @media (max-width: 700px) {
+        .flex-container {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+        .gadse {
+            width: 80vw;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .mstyle {
+            max-width: 100%;
+        }
+    } 
+</style>
 </head>
 <body>
     <header>
@@ -41,19 +85,33 @@
         <br>
     </header>
     <main>
-        <div class="flex-container">
-        <p class="mstyle">
-            Mein Name ist Julius Grotrian und ich bin 18 Jahre alt.
-            Ich mache diese Website im Rahmen der Hausübung für Web- und Mobile Computing.
-            Ich habe bis jetzt nicht viel Erfahrung mit CSS, alle meine Webseiten schauen grottenhässlich aus.
-            Ich hoffe ich kann das mit dem laufe der Zeit verbessern.
-            Außerdem will ich noch etwas dazu schreiben, weil ich sonst nicht weiß was ich hier hinschreiben soll.
-            <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-        </p>
-        <img src="OIP.5fpbZRq_-eA5vDLuLuXxNAHaHN.webp" alt="Profilbild" class="gadse">
+        <div class="outer-flex">
+            <div class="flex-container">
+                <p class="mstyle">
+                    Mein Name ist Julius Grotrian. Ich bin 18.
+                    Ich mache diese Website im Rahmen der Hausübung für Web- und Mobile Computing.
+                    Ich habe bis jetzt nicht viel Erfahrung mit CSS, alle meine Webseiten schauen grottenhässlich aus.
+                    Ich hoffe ich kann das mit dem laufe der Zeit verbessern.
+                    Außerdem will ich noch etwas dazu schreiben, weil ich sonst nicht weiß was ich hier hinschreiben soll.
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                </p>
+                <img src="OIP.5fpbZRq_-eA5vDLuLuXxNAHaHN.webp" alt="Profilbild" class="gadse">
+            </div>
+            <div class="flex-container">
+                <div class="mstyle">
+                    <h3>Steckbrief!!!:</h3>
+                    <ul>
+                        <li>18 Jahre alt 👴</li>
+                        <li>Burgenländer 👽</li>
+                        <li>Nicht gut in html & css. Das hat zu lange gebraucht 🤡</li>
+                        <li>Die Seite funktioniert aber dank @media auch im horizontalmodus 🤤</li>
+                        <li>Omar hat mich gestern komisch angeschaut. Ich weiß nicht was der von mir will ☹️</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
 </body>
