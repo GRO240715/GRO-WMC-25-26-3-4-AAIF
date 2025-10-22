@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7em;
+}
+
+.grid-container>* {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.heading {
+    grid-column: 1 / -1;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
