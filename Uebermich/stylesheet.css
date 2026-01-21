@@ -1,0 +1,142 @@
+/* Color Scheme */
+:root {
+    --primary-bg: #dfdab9;
+    --secondary-bg: #e9e6db;
+    --accent-hover: #c9b998;
+    --text-dark: #333;
+    --text-brown: #5d4037;
+}
+
+body {
+    background-color: var(--primary-bg);
+}
+
+/* Navbar Styling */
+.navbar {
+    position: sticky;
+    top: 10px;
+    background-color: var(--secondary-bg);
+    display: flex;
+    gap: 20px;
+    padding: 15px 40px;
+    margin: 10px 40px;
+    border: 2px solid var(--text-dark);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: underline;
+    font-family: "Courier";
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: var(--accent-hover);
+    color: var(--text-brown);
+    outline: 2px solid var(--text-dark);
+    outline-offset: -2px;
+}
+
+.navbar a:nth-child(3):hover {
+    background-color: red;
+    color: darkred;
+    outline: 2px solid darkred;
+    outline-offset: -2px;
+}
+
+/* Header Styling */
+.nstyle {
+    font-family: "Courier";
+    text-align: center;
+}
+
+/* Grid Layout */
+.outer-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1900px;
+    margin: 40px auto 0;
+    padding: 0 40px;
+}
+
+/* Container Styling */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    min-width: 300px;
+    max-width: 900px;
+    padding: 20px;
+    border: 2px solid var(--text-dark);
+    border-radius: 8px;
+    background: var(--secondary-bg);
+    box-sizing: border-box;
+}
+
+/* Text Styling */
+.mstyle {
+    font-family: "Courier";
+    font-weight: bolder;
+    font-size: large;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    max-width: 700px;
+}
+
+/* Image Styling */
+.gadse {
+    width: 50%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 8px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.flex-container:nth-child(3) .gadse,
+.flex-container:nth-child(6) .gadse {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    object-fit: fill;
+    flex-shrink: 1;
+}
+
+@media (max-width: 1200px) {
+    .outer-flex {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .flex-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .gadse {
+        width: 80vw;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .mstyle {
+        max-width: 100%;
+    }
+}
