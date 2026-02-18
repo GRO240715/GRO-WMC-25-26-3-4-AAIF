@@ -16,6 +16,9 @@ function calculate(numberInput1, numberInput2) {
         case "divide":
             result = f1 / f2;
             break;
+        case "modulo":
+            result = f1 % f2;
+            break;
     }
     document.getElementById("result").innerText = "Lösung: " + result;
 }
