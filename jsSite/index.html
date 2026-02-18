@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onClick</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style=place-items:center;display:flex;flex-direction:column;gap:20px;margin-top:50px;>
+    <h1>
+        Taschenrechner
+    </h1>
+    <form action="#">
+        <input type="number" name="numberInput1" id="numberInput1" placeholder="Number 1">
+        <input type="number" name="numberInput2" id="numberInput2" placeholder="Number 2">
+        <select name="operation" id="operation">
+            <option value="add">Addition</option>
+            <option value="subtract">Subtraktion</option>
+            <option value="multiply">Multiplikation</option>
+            <option value="divide">Division</option>
+        </select>
+        <button type="button" onclick="calculate()">Ausrechnen</button>
+        <p id="result">Lösung wird hier erscheinen</p>
+
+    </form>
+</body>
+
+</html>
