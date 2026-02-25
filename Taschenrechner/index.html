@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>onClick</title>
+    <title>Taschenrechner</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style=place-items:center;display:flex;flex-direction:column;gap:20px;margin-top:50px;>
+<body>
     <h1>
         Taschenrechner
     </h1>
@@ -22,10 +22,13 @@
             <option value="multiply">Multiplikation</option>
             <option value="divide">Division</option>
             <option value="modulo">Modulo</option>
-
+            <option value="charliekirk">charliekirk</option>
         </select>
         <button type="button" onclick="calculate()">Ausrechnen</button>
-        <p id="result">Lösung wird hier erscheinen</p>
+        <p id="result">
+            <span id="result-text">Lösung wird hier erscheinen</span>
+            <button id="continue-btn" type="button">Continue using number</button>
+        </p>
 
     </form>
 </body>
