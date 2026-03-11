@@ -23,9 +23,6 @@ function calculate(numberInput1, numberInput2) {
         case "modulo":
             result = f1 % f2;
             break;
-        case "charliekirk":
-            result = "rest in piss. king of the perk, charlie kirk";
-            break;
     }
 
     if (typeof result === "number" && !isNaN(result)) {
