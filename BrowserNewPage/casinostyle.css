@@ -1,0 +1,98 @@
+:root {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #f7f7f7;
+    --text: #000000;
+    --muted: #444444;
+    --border: #000000;
+    --border-width: 3px;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.head {
+    width: 50%;
+    margin: auto;
+}
+
+#geld-counter {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    font-weight: 700;
+    z-index: 999;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.instance {
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+.hand-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.hand-card {
+    flex: 1 1 220px;
+    min-width: 220px;
+    max-width: 280px;
+    min-height: 320px;
+    padding: 18px;
+    border: 2px solid var(--border);
+    background: var(--surface-2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 0.95rem;
+    background-color: white;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.hand-sum {
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.game-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.game-controls button {
+    padding: 12px 20px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.game-controls button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
