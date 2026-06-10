@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="casinostyle.css">
+    <title>Casino</title>
+    <script src="gamblingscript.js" defer></script>
+</head>
+
+<body>
+    <div id="geld-counter">geld: 0</div>
+    <div class="head">
+        <h1>Willkommen im Casino!</h1>
+        <h3>Kein bock mehr auf Englisch</h3>
+    </div>
+
+    <section class="instance">
+        <h3>BlackJack</h3>
+        <button id="startblackjack">50 Geld zum spiel starten</button>
+        <div id="hand-row" class="hand-row hidden" style="display: none;">
+            <div id="dealerhand" class="hand-card">
+                <h4>Dealerhand</h4>
+                <div id="dealer-cards" class="card-list"></div>
+                <div id="dealer-sum" class="hand-sum">Summe: 0</div>
+            </div>
+            <div id="playerhand" class="hand-card">
+                <h4>Playerhand</h4>
+                <div id="player-cards" class="card-list"></div>
+                <div id="player-sum" class="hand-sum">Summe: 0</div>
+            </div>
+        </div>
+        <div id="action-buttons" class="game-controls hidden" style="display: none;">
+            <button id="hit-button">Hit</button>
+            <button id="stand-button">Stand</button>
+        </div>
+    </section>
+</body>
+
+</html>
